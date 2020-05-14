@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Info, Data
+
+admin.site.register(Info)
+admin.site.register(Data)
