@@ -9,7 +9,7 @@ class Info(models.Model):
         return self.user
 
 class Data(models.Model):
-    data = models.ForeignKey(Info, on_delete=models.CASCADE)
+    user_link = models.ForeignKey(Info, on_delete=models.CASCADE)
     data_text = models.CharField(max_length=199999)
 
     def __str__(self):

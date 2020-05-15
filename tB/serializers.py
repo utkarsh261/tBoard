@@ -8,6 +8,7 @@ class InfoSerializer(serializers.HyperlinkedModelSerializer):
         fields = ['user', 'name']
 
 class DataSerializer(serializers.HyperlinkedModelSerializer):
+    user_id = serializers.CharField(source='user_link', read_only=True)
     class Meta:
         model = Data
-        fields = ['data', 'data_text']
+        fields = ['user_id', 'user_link', 'data_text']
